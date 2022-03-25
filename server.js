@@ -10,9 +10,7 @@ const app = express();
 app.use(cors())
 app.use( express.urlencoded({extended:true}) );
 app.use( express.json() );
-app.use(express.static(path.join(__dirname, "/public/dist/public")))
-app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
-app.use("/resources", express.static(path.join(__dirname + "/resources")));
+// app.use(express.static(path.join(__dirname, "/public/dist/public")))
 
 
 app.use((req, res, next) => {
@@ -26,10 +24,7 @@ app.use((req, res, next) => {
 require("./server/config/database.js");
 
 //*ROUTES------------------------------------------------------------------------------------------
-app.use( '/users', AdminRouter );
-app.use( '/codes', CodeRouter );
-app.use( '/notices', NoticeRouter );
-app.use( '/phones', PhoneRouter );
+app.use( '/users', UserRouter );
 
 
 
