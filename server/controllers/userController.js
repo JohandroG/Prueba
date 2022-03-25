@@ -32,7 +32,13 @@ const UserController = {
                 })
             })
             .catch(error=>{
-                res.status(400).json(error)
+                
+                if(error.keyValue.username){
+                    res.status(400).json({errors: [{usernameused: "This username is being used"}]})
+                }
+                else{
+                    res.status(400).json({errors: [{error: "An error has ocurred"}]})
+                }
             })
         }
     },
@@ -47,13 +53,13 @@ const UserController = {
             const userrequested = await UserModel.getUserByUsername(req.body.username)
 
             if(userrequested === null){
-                return res.status(400).json({noexits:"This user does not exits"})
+                return res.status(400).json({errors: [{noexist: "This username does not exists"}]})
             }
 
             bcrypt.compare( req.body.password, userrequested.password )
             .then(flag =>{
                 if( !flag ){
-                    res.status(400).json({passworderror: "🔐 This password is wrong"})
+                    res.status(400).json({errors: [{passerror: "🔐 This password is wrong"}]})
                 }
 
                 userInfo = {
@@ -63,6 +69,9 @@ const UserController = {
                     username : userrequested.username,
                 }
                 res.status(200).json(userInfo);
+            })
+            .catch(error=>{
+                console.log(error);
             })
         }
     }

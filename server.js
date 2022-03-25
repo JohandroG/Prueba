@@ -10,7 +10,7 @@ const app = express();
 app.use(cors())
 app.use( express.urlencoded({extended:true}) );
 app.use( express.json() );
-// app.use(express.static(path.join(__dirname, "/public/dist/public")))
+app.use(express.static(path.join(__dirname, "/public/dist/public")))
 
 
 app.use((req, res, next) => {
@@ -27,13 +27,14 @@ require("./server/config/database.js");
 app.use( '/users', UserRouter );
 
 
-
-
 //*REACT------------------------------------------------------------------------------------------
 
-// app.all('*', function (req,res) {
-//     res.sendFile(path.resolve(".././public/dist/public/index.html"))
-// })
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, '../MERN-BELT/belt/build', 'index.html'));
+// });
+
+// app.use(express.static(path.resolve(__dirname, '../MERN-BELT/belt/build')));
+
 
 //*PORTS----------------------------------------------------------------------------------------
 
@@ -42,7 +43,5 @@ const port = process.env.PORT || 8080;
 
 app.listen(port, function(){
     console.log("This server is working on port: 8080");
+    console.log("Open your browser and hit url 'localhost:8080'");
 })
-
-
-//----------------Mundo

@@ -23,10 +23,8 @@ UserValidator = {
             body('username').isLength({min:5}).withMessage('The password must be al least 5 caracters long'),
             body('password').isLength({min:8}).withMessage('The password must be al least 8 caracters long'),
 
-            body('firstname').exists({checkFalsy: true}).withMessage('This space can not be empty'),
-            body('lastname').exists({checkFalsy: true}).withMessage('This space can not be empty'),
             body('username').exists({checkFalsy: true}).withMessage('This space can not be empty'),
-            body('password').exists({checkFalsy: true}).withMessage('This space can not be empty')
+            body('password').exists({checkFalsy: true}).withMessage('This space can not be empty'),
         ],
 
     //*---VALIDATORS FOR...----------------------------------------------
