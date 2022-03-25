@@ -13,12 +13,17 @@ const Home = () => {
     }
     secure()
 
+    let arr = ["pizza","pollo","ella"]
 
     return (
         <React.Fragment>
             <Navbar/>
             
             <h1>Welcome Home</h1>
+
+            {arr.map(ar=>{
+                return <p>{ar}</p>
+            })}
         </React.Fragment>
     )
 }

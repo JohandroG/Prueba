@@ -1,6 +1,6 @@
 //*REQUIRES------------------------------------------------------------------------------------------
 const express = require('express');
-const {UserRouter} = require('./server/routes/userRouter');
+const {VoteRouter} = require('./server/routes/voteRouter');
 const path = require('path');
 var cors = require('cors');
 const exp = require('constants');
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 require("./server/config/database.js");
 
 //*ROUTES------------------------------------------------------------------------------------------
-app.use( '/users', UserRouter );
+app.use( '/votes', VoteRouter );
 
 
 //*REACT------------------------------------------------------------------------------------------

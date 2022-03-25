@@ -1,3 +1,3 @@
 var mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/mernbelt-db");
+mongoose.connect("mongodb://localhost/voting-dojo");
