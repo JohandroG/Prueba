@@ -1,31 +1,32 @@
 import React from 'react'
-import Navbar from './Navbar'
+import { Link } from 'react-router-dom'
 
+import Top3 from './Top3'
+import Recent from './Recent'
+
+import "../App.css"
 
 const Home = () => {
 
+return (
+    <div className='home'>
+        <p>
+            <Link to="/polls/new" className='create'>
+                <button className='btn btn-primary'>Create new Poll</button>
+            </Link>
+        </p>
+            <div className='homeinfo'>
+                <div>
+                    <Top3 />
+                </div>
+                <div>
+                    <Recent />
+                </div>
+            </div>
+    </div>
 
-    function secure(){
-        const user = sessionStorage.getItem("userinfo")
-        if(!user){
-            window.location.replace("/")
-        }
-    }
-    secure()
 
-    let arr = ["pizza","pollo","ella"]
-
-    return (
-        <React.Fragment>
-            <Navbar/>
-            
-            <h1>Welcome Home</h1>
-
-            {arr.map(ar=>{
-                return <p>{ar}</p>
-            })}
-        </React.Fragment>
-    )
+)
 }
 
 export default Home

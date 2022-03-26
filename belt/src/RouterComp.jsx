@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import Start from "./components/Start";
+
 import Home from "./components/Home";
-import Navbar  from './components/Navbar';
+import NewVote from './components/NewVote';
+
 
 
 const RouterComp = () => {
@@ -11,8 +12,8 @@ return (
     <Router className="container">
 
     <Routes>
-        <Route path="/home" element={<Home/>} exact></Route>
-        <Route path="/" element={<Start/>} exact></Route>
+        <Route path="/" element={<Home/>} exact></Route>
+        <Route path="/polls/new" element={<NewVote/>} exact></Route>
     </Routes>
     </Router>
 )

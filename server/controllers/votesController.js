@@ -64,7 +64,7 @@ const VoteController = {
             })
         }
         else{
-            res.status(200).json(errors)
+            res.status(400).json(errors)
         }
 
     },

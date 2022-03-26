@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    background-color: rgb(196, 196, 196);
+}
+
+.recent{
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.create{
+    margin-left: 80vw;
+}
+
+.homeinfo{
+    display: flex;
+    justify-content: space-around;
+}
+
+.homeinfo div{
+    width: 40vw;
+}
+
+.errors{
+    color: red;
+}
