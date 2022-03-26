@@ -1,0 +1,14 @@
+Saludos Jose!
+
+Actualmente esto fue lo que pude lograr en estas 5 horas de desarrollo,
+se que tiene algunos fallos y se puede mejorar muchisimo, cosa que considero que puedo hacer
+sin embargo como te mencione REACT no es parte de mi curriculum, por lo que me atraso bastante
+desarrollar en esta tecnologia sin conocimientos previos, pero he hecho lo mejor que estaba
+en mis manos con mi conocimiento de Angular y JavaScript disponible...
+
+Aun asi agradeceria que me pudieras considerar para el puesto, y agradesco enormemente
+toda la ayuda durante este proceso
+
+Se despide....
+
+                Johandro Gonzalez A

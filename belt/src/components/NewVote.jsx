@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import "../App.css"
 
 const NewVote = () => {
@@ -46,6 +47,11 @@ const createV = (e) =>{
   return (
 
     <React.Fragment>
+      <p>
+            <Link to="/" className='create'>
+                <button className='btn btn-primary'>Back to Home</button>
+            </Link>
+      </p>
       <div>
         <form className='d-flex flex-row justify-content-around m-5' onSubmit={createV}>
           <div className='d-flex flex-column justify-content-between align-items-center'>
